@@ -1,23 +1,36 @@
 public class Opdracht1 {
 
-    public static void main (String[] args) {
-        opdracht1();
+    public static void main(String[] args) {
+        String equation = "4 + 3";
+        int result = Calculation.calc(equation);
+        System.out.println(equation + " = " + result);
+
+        equation = "4 * 3 + 2";
+        result = Calculation.calc(equation);
+        System.out.println(equation + " = " + result);
+
+        equation = "(3 + 4) * 3 ";
+        result = Calculation.calc(equation);
+        System.out.println(equation + " = " + result);
+
+        equation = "(8 + 1) - 3 - 4 + (2 * 3)";
+        result = Calculation.calc(equation);
+        System.out.println(equation + " = " + result);
+
+        equation = "(5 + 2) * (3 + 2)";
+        result = Calculation.calc(equation);
+        System.out.println(equation + " = " + result);
+
+        equation = "((3 - 1) + 4) * 8";
+        result = Calculation.calc(equation);
+        System.out.println(equation + " = " + result);
+
+    }
+}
+  class Calculation {
+     static int calc(String equation) {
+
     }
 
-    public static void opdracht1() {
-        //define variables
-        int n1 = 0;
-        int n2 = 1;
-        int n3, i;
-        int count = 10;
-        System.out.print(n1 + " " + n2);
 
-        //calculation
-        for(i = 2; i < count; ++i) {
-            n3 = n1 + n2;
-            System.out.print(" " + n3);
-            n1 = n2;
-            n2 = n3;
-        }
-    }
 }
