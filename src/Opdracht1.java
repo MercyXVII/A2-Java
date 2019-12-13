@@ -24,13 +24,11 @@ public class Opdracht1 {
         equation = "((3 - 1) + 4) * 8";
         result = Calculation.calc(equation);
         System.out.println(equation + " = " + result);
-
     }
 }
+
   class Calculation {
      static int calc(String equation) {
-
+            return 0;
     }
-
-
 }
