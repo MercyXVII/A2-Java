@@ -31,5 +31,6 @@ public class Opdracht1 {
      static int calc(String equation) {
 
          calc(equation);
+         return 0;
     }
 }
