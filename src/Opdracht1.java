@@ -6,8 +6,8 @@ public class Opdracht1 {
         System.out.println(equation + " = " + result);
 
         equation = "4 * 3 + 2";
-        result = Calculation.calc(equation);
         System.out.println(equation + " = " + result);
+        result = Calculation.calc(equation);
 
         equation = "(3 + 4) * 3 ";
         result = Calculation.calc(equation);
@@ -29,6 +29,7 @@ public class Opdracht1 {
 
   class Calculation {
      static int calc(String equation) {
-            return 0;
+
+         calc(equation);
     }
 }
