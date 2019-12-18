@@ -35,9 +35,13 @@ public class Opdracht1 {
          System.out.println("komt binnen:" + equation + " lengte string:" + equation.length());
 
         //1. splits getallen en operators/tekens (ontleden)
-
-
+        String Array[] = equation.split(" ");
         //2. string naar getallen omzetten
+          int n1 = Integer.parseInt(Array[0]);
+          int n2 = Integer.parseInt(Array[2]);
+          System.out.println(n1);
+          System.out.println(Array[1]);
+          System.out.println(n2);
 
         return 0;
       }
