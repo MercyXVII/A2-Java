@@ -5,6 +5,7 @@ public class Opdracht1 {
         int result = Calculation.calc(equation);
         System.out.println(equation + " = " + result);
 
+        /**
         equation = "4 * 3 + 2";
         System.out.println(equation + " = " + result);
         result = Calculation.calc(equation);
@@ -13,7 +14,7 @@ public class Opdracht1 {
         result = Calculation.calc(equation);
         System.out.println(equation + " = " + result);
 
-        equation = "(8 + 1) - 3 - 4 + (2 * 3)";
+        equation = "(8 + 1) - 3 + (2 * 3)";
         result = Calculation.calc(equation);
         System.out.println(equation + " = " + result);
 
@@ -24,13 +25,20 @@ public class Opdracht1 {
         equation = "((3 - 1) + 4) * 8";
         result = Calculation.calc(equation);
         System.out.println(equation + " = " + result);
+        */
     }
 }
 
   class Calculation {
-     static int calc(String equation) {
+      static int calc(String equation) {
+       //0
+         System.out.println("komt binnen:" + equation + " lengte string:" + equation.length());
 
-         calc(equation);
-         return 0;
-    }
-}
+        //1. splits getallen en operators/tekens (ontleden)
+
+
+        //2. string naar getallen omzetten
+
+        return 0;
+      }
+  }
