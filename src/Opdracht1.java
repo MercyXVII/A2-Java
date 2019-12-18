@@ -35,11 +35,7 @@ public class Opdracht1 {
          System.out.println("komt binnen:" + equation + " lengte string:" + equation.length());
 
         //1. splits getallen en operators/tekens (ontleden)
-         //String Array[] = equation.split(" ");
         //2. string naar getallen omzetten
-          //int n1 = Integer.parseInt(Array[0]);
-          //werkt niet: int n3 = Integer.parseInt(Array[1]);
-          //int n2 = Integer.parseInt(Array[2]);
 
 
           char[] array = equation.toCharArray();
@@ -48,7 +44,8 @@ public class Opdracht1 {
 
          for(int i=0; i<array.length; i++){
              if (Character.isDigit(equation.charAt(i))) {
-                 System.out.println(equation.charAt(i) + " is a digit");
+                 int n = Integer.parseInt(String.valueOf(equation.charAt(i)));
+                 System.out.println(n + " is a digit");
              } else {
                  switch(equation.charAt(i)) {
                      case '+':
@@ -67,6 +64,6 @@ public class Opdracht1 {
                  }
              }
          }
-          return 0;
+         return 0;
       }
   }
