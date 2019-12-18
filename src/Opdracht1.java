@@ -31,17 +31,11 @@ public class Opdracht1 {
 
   class Calculation {
       static int calc(String equation) {
-       //0
          System.out.println("komt binnen:" + equation + " lengte string:" + equation.length());
-
         //1. splits getallen en operators/tekens (ontleden)
         //2. string naar getallen omzetten
-
-
-          char[] array = equation.toCharArray();
-
-          //generaliseer omdat we niet weten wat we op welke positie  in equation aantreffen
-
+         char[] array = equation.toCharArray();
+        //generaliseer omdat we niet weten wat we op welke positie  in equation aantreffen
          for(int i=0; i<array.length; i++){
              if (Character.isDigit(equation.charAt(i))) {
                  int n = Integer.parseInt(String.valueOf(equation.charAt(i)));
