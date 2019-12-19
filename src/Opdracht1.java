@@ -1,6 +1,7 @@
 public class Opdracht1 {
 
     public static void main(String[] args) {
+
         String equation = "4 + 3";
         int result = Calculation.calc(equation);
         System.out.println(equation + " = " + result);
@@ -32,27 +33,42 @@ public class Opdracht1 {
   class Calculation {
       static int calc(String equation) {
          System.out.println("komt binnen:" + equation + " lengte string:" + equation.length());
-        //1. splits getallen en operators/tekens (ontleden)
-        //2. string naar getallen omzetten
+
+        //1. splits getallen en operators/tekens (ontleden).
+        //2. string naar getallen omzetten.
+
          char[] array = equation.toCharArray();
-        //generaliseer omdat we niet weten wat we op welke positie  in equation aantreffen
+         int[] arraycalc;
+         arraycalc = new int[50];
+
+        //generaliseer omdat we niet weten wat we op welke positie  in equation aantreffen.
+        //getallen oplsaan voor later gebruik
+
          for(int i=0; i<array.length; i++){
+
              if (Character.isDigit(equation.charAt(i))) {
                  int n = Integer.parseInt(String.valueOf(equation.charAt(i)));
+                 arraycalc[0] = n;
                  System.out.println(n + " is a digit");
              } else {
                  switch(equation.charAt(i)) {
                      case '+':
                          System.out.println("is a +");
+                         arraycalc[1]= Integer.parseInt(String.valueOf(equation.charAt(i+2)));
+                         int value = arraycalc[0] + arraycalc[1];
+                         System.out.println("Berekende waarde bij plus: " + value);
                          break;
                      case '-':
+
                          System.out.println("is a -");
                          break;
                      case '*':
                          System.out.println("is a *");
+
                          break;
                      case '/':
                          System.out.println("is a /");
+
                          break;
                      default:
                  }
