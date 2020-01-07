@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Opdracht1 {
 
     public static void main(String[] args) {
@@ -6,8 +8,8 @@ public class Opdracht1 {
         int result = Calculation.calc(equation);
         System.out.println(equation + " = " + result);
 
-        /**
-        equation = "4 * 3 + 2";
+
+        /** equation = "4 * 3 + 2";
         System.out.println(equation + " = " + result);
         result = Calculation.calc(equation);
 
@@ -25,8 +27,8 @@ public class Opdracht1 {
 
         equation = "(3 - 1) + 4 * 8";
         result = Calculation.calc(equation);
-        System.out.println(equation + " = " + result);
-        */
+        System.out.println(equation + " = " + result); */
+
     }
 }
 
@@ -40,9 +42,13 @@ public class Opdracht1 {
           char[] array = equation.toCharArray();
           int[] arraycalc;
           arraycalc = new int[array.length];
+          int operator_count = 0;
+            ArrayList<Character> operators = new ArrayList<>();
 
-          //generaliseer omdat we niet weten wat we op welke positie  in equation aantreffen.
-          //getallen oplsaan voor later gebruik
+
+
+          //3. generaliseer omdat we niet weten wat we op welke positie  in equation aantreffen.
+          //4. getallen oplsaan voor later gebruik
 
           for (int i = 0; i < array.length; i++) {
 
@@ -50,26 +56,37 @@ public class Opdracht1 {
                   int n = Integer.parseInt(String.valueOf(equation.charAt(i)));
                   arraycalc[0] = n;
                   System.out.println(n + " is a digit");
-                  //getallen mee geven aan de cases in de juiste volgorde.
-              } else {
-                  char op = equation.charAt(i);
-                  operators(op);
+                  //System.out.println(arraycalc[0]);
+
+           //getallen mee geven aan de cases in de juiste volgorde.
+              } else if(equation.charAt(i) == '+' || equation.charAt(i) == '-' || equation.charAt(i) == '*'){
+                    operator_count++;
+                    operators.add(equation.charAt(i));
+                    char op = equation.charAt(i);
+
+                    operators(op);
+              } else if(equation.charAt(i) == '(') {
+            //pak de getallen er na tot dat je ) vindt.
               }
-          } return 0;
+          }
+           int num1 = arraycalc[0];
+           int num2 = 0;
+           int j = 0;
+          return num1;
       }
         static int operators(char op) {
           switch(op) {
               case '+':
                   System.out.println("is a +");
-
+                    /**num1 = num1 + num2;*/
                   break;
               case '-':
                   System.out.println("is a -");
-
+                    /**num1 = num1 - num2; */
                   break;
               case '*':
                   System.out.println("is a *");
-
+                   /**num1 = num1 * num2; */
                   break;
               default:
           } return 0;
